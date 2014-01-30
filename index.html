@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Roll Call</title>
+	<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta name="robots" content="all" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+	<style>
+		* { padding: 0; margin: 0; }
+		body { background-color: #333; }
+		p { color: #dc1233; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+		a { color: #dc1233; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
+		a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
+		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
+		#about { width: 50%; padding: 0 0 0 150px; margin: -150px 50px 0 auto !important; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }
+		@media (max-width: 767px) {
+			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
+			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; background-color: rgba(0,0,0,.2); }
+			background-image { opacity: 0.2; }
+		}
+	</style>
+</head>	
+    
+<body>
+
+<!-- swap out for a logo -->
+<div id="monogram">
+	<img src="rollcall_trans.png" />
+</div>
+
+<!-- swap out for information about yourself -->
+<div id="about">
+	<p><em>Roll Call</em> is a San Francisco-based casual cycling club composed mostly of software designers and engineers. Formed in 2012, we typically value camaraderie over speed &mdash; but we're not opposed to <a href="http://app.strava.com/segments/229781">mashing up Hawk Hill</a> when the opportunity arises.</p>
+	<p>Our flagship ride, a two-hour affair over varied terrain, departs from <a href="https://maps.google.com/maps?q=Fell+and+Baker+SF+CA&hl=en&sll=37.773598,-122.440943&sspn=0.002455,0.004823&hnear=Fell+St+%26+Baker+St,+San+Francisco,+California+94117&t=m&z=16">the Panhandle (Fell &amp; Baker)</a> at 6:45 AM on Wednesdays. A longer ride is generally created ad-hoc for Sunday morning spinning.</p>
+	<p>The best way to get in touch is to come ride, but feel free to <a href="http://app.strava.com/clubs/roll-call">check us out on Strava</a>, <a href="https://twitter.com/rollcallsf">follow us on Twitter</a>, or <a href="mailto: hello@rollcall.cc">shoot us an email</a>.</p>
+</div>
+
+<!--include jquery & backstretch-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.backstretch.min.js"></script>
+<script type="text/javascript">
+$(function(){
+     $(window).resize(function(){
+         if($(this).width() >= 767){
+             $.backstretch("vista.jpg", {speed: 150});
+         }
+      })
+      .resize();//trigger resize on page load
+});
+</script>
+
+</body>	
+</html>
