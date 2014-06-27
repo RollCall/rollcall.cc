@@ -1,60 +1,99 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Roll Call</title>
-	<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
-	<meta http-equiv="pragma" content="no-cache" />
-	<meta name="robots" content="all" />
-	<meta name="MSSmartTagsPreventParsing" content="true" />
-	<meta http-equiv="imagetoolbar" content="false" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->	
+	<meta charset="utf-8" />
 	<style>
-		* { padding: 0; margin: 0; }
-		body { background-color: #333; }
-		p { color: #dc1233; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
-		a { color: #dc1233; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
-		a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
-		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
-		#about { width: 50%; padding: 0 0 0 150px; margin: -150px 50px 0 auto !important; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }
-		@media (max-width: 767px) {
-			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
-			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; background-color: rgba(0,0,0,.2); }
-			background-image { opacity: 0.2; }
-		}
+    * { margin: 0; }
+    html, body { 
+      color: #333;
+      font-size: 17px;
+      font-family: "adelle-sans", Helvetica, Arial, sans-serif; 
+      line-height: 1.4em; 
+      -webkit-font-smoothing: antialiased;
+      height: 100%;
+    }
+    a { color: #3c947f; font-weight: bold; text-decoration: none; }
+    h1 { font-size: 24px; line-height: 24px; }
+    h3 { font-size: 17px; line-height: 17px; color: #f60; margin-bottom: -10px; }
+    .logo { width: 70px; }
+    .wrapper {
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+      margin: 0 auto -200px;
+    }
+    .footer, .push {
+      height: 200px;
+      text-align: center;
+    }
+     ul { 
+      list-style: none;
+      padding: 0;
+      margin: 0;
+     }
+     .elsewhere {
+      margin-bottom: 40px; 
+      margin: 20px auto 0 auto;
+      text-align: center;
+     }
+     .elsewhere a {
+      color: white;
+      font-size: 12px;
+      padding: 6px 10px 6px;
+      border: 2px solid;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+      margin: 0 10px;
+      -webkit-transition: .2s linear background-color;
+     }
+     .elsewhere a:hover { 
+      color: white;
+      background-color: #52a18e;
+      border: 2px solid #52a18e;
+     }
+
+     @media (max-width: 767px) { 
+      .container { width: 90%; }
+      .sbt,.sbh { width: 100%; float: none; padding: 0; border: 0; }
+    }
 	</style>
-</head>	
-    
+  <script type="text/javascript" src="http://use.typekit.net/hks5jee.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+</head>
 <body>
 
-<!-- swap out for a logo -->
-<div id="monogram">
-	<img src="rollcall_trans.png" />
-</div>
+  <div class="wrapper">
+    <div class="push"></div>
+  </div>
+  <div class="footer">
+      <img class="logo" src="rollcall-logo.png">
+      <p class="elsewhere">
+        <a href="http://twitter.com/rollcallsf">Twitter</a><a href="http://www.strava.com/clubs/roll-call">Strava</a><a href="http://instagram.com/rollcallsf">Instagram</a>
+      </p>
+  </div>
 
-<!-- swap out for information about yourself -->
-<div id="about">
-	<p><em>Roll Call</em> is a San Francisco-based casual cycling club composed mostly of software designers and engineers. Formed in 2012, we typically value camaraderie over speed &mdash; but we're not opposed to <a href="http://app.strava.com/segments/229781">mashing up Hawk Hill</a> when the opportunity arises.</p>
-	<p>Our flagship ride, a two-hour affair over varied terrain, departs from <a href="https://maps.google.com/maps?q=Fell+and+Baker+SF+CA&hl=en&sll=37.773598,-122.440943&sspn=0.002455,0.004823&hnear=Fell+St+%26+Baker+St,+San+Francisco,+California+94117&t=m&z=16">the Panhandle (Fell &amp; Baker)</a> at 6:45 AM on Wednesdays. A longer ride is generally created ad-hoc for Sunday morning spinning.</p>
-	<p>The best way to get in touch is to come ride, but feel free to <a href="http://app.strava.com/clubs/roll-call">check us out on Strava</a>, <a href="https://twitter.com/rollcallsf">follow us on Twitter</a>, or <a href="mailto: hello@rollcall.cc">shoot us an email</a>.</p>
-</div>
+    
 
-<!--include jquery & backstretch-->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.backstretch.min.js"></script>
-<script type="text/javascript">
-$(function(){
-     $(window).resize(function(){
-         if($(this).width() >= 767){
-             $.backstretch("vista.jpg", {speed: 150});
-         }
-      })
-      .resize();//trigger resize on page load
-});
-</script>
-
-</body>	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="jquery.backstretch.min.js"></script>
+	<script>
+    $.backstretch([
+          "02.jpg",
+          "01.jpg",
+          "03.jpg",
+          "04.jpg",
+          "05.jpg",
+          "07.jpg",
+          "08.jpg",
+          "09.jpg",
+          "10.jpg",
+          "11.jpg",
+          "12.jpg"
+        ], {
+            fade: 750,
+            duration: 4000
+        });
+    </script>
+</body>
 </html>
